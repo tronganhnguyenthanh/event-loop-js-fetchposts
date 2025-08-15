@@ -3,7 +3,7 @@ async function fetchPosts(){
  const value = document.querySelector(".form-control").value
  const res = await fetch(apiPostURL,{headers:{"Cache-Control":"no-cache, no-store"}})
  const posts = await res.json()
- const limitPosts = await posts?.slice(0, value)
+ let limitPosts = await posts?.slice(0, value)
  let list = "<ol class='text-info'>"
  limitPosts?.forEach(function(item){
   list += `<li>${item?.body}</li>`
@@ -26,7 +26,7 @@ function resetLoading(){
  document.querySelector("#loading").innerHTML = ""
 }
 
-document.querySelector(".btn.btn-primary").addEventListener("click", function(){
+document.querySelector(".btn-seeMore").addEventListener("click", function(){
  // fetch posts after 1 seconds and reset loading when our posts have finished
  setTimeout(function(){
   fetchPosts()
