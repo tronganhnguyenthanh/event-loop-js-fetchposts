@@ -13,3 +13,9 @@ li::first-letter{
 .form-custom-control:focus{
   box-shadow:none !important;
 }
+
+@media (max-width:576px){
+ .form-custom-control{
+   width:10%;
+  }
+}
