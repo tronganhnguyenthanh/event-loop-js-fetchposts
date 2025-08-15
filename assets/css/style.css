@@ -7,7 +7,7 @@ li::first-letter{
 }
 
 .form-custom-control{
-  width:9%;
+  width:5%;
 }
 
 .form-custom-control:focus{
@@ -16,6 +16,6 @@ li::first-letter{
 
 @media (max-width:576px){
  .form-custom-control{
-   width:10%;
+   width:15%;
   }
 }
