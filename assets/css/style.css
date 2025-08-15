@@ -1,0 +1,15 @@
+li::marker{
+ color:#ffa233 !important;
+}
+
+li::first-letter{
+ text-transform:capitalize !important;
+}
+
+.form-custom-control{
+  width:9%;
+}
+
+.form-custom-control:focus{
+  box-shadow:none !important;
+}
