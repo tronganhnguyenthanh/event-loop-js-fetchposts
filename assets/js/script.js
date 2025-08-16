@@ -26,10 +26,21 @@ function resetLoading(){
  document.querySelector("#loading").innerHTML = ""
 }
 
+function resetPosts(){
+ document.querySelector("#posts").innerHTML = ""
+}
+
 document.querySelector(".btn-seeMore").addEventListener("click", function(){
- // fetch posts after 1 seconds and reset loading when our posts have finished
- setTimeout(function(){
-  fetchPosts()
+  const value = document.querySelector(".form-control").value
+  // fetch posts after 1 seconds and reset loading when our posts have finished
+  setTimeout(function(){
+   if(value > 100){
+    document.querySelector("#err").innerHTML = `<h2 class="text-center text-danger">API Not found</h2>`
+    resetPosts()
+  }else{
+    fetchPosts()
+    document.querySelector("#err").innerHTML = ""
+  }
   resetLoading()
  },1000)
  // Loading
