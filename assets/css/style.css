@@ -30,7 +30,6 @@ li::first-letter{
 
 @media (max-width: 576px){
  .form-custom-control{
-   width:19% !important;
-   min-block-size:auto !important;
+   width:15% !important;
   }
 }

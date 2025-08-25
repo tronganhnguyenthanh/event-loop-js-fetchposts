@@ -31,20 +31,27 @@ function resetPosts(){
 }
 
 document.querySelector(".btn-seeMore").addEventListener("click", function(){
-  const value = document.querySelector(".form-control").value
-  // fetch posts after 1 seconds and reset loading when our posts have finished
-  setTimeout(function(){
-   if(value > 100 || value > 10000){
-    document.querySelector("#err").innerHTML = `<h2 class="text-center text-danger">API Not found</h2>`
-    resetPosts()
-    document.querySelector(".form-custom-control").style.width = "auto"
+  if(matchMedia("(max-width: 576px)").matches){
+   checkResponsive()
+  }else{
+    checkResponsive()
+  }
+})
+
+function checkResponsive(){
+ const value = document.querySelector(".form-control").value
+ // fetch posts after 1 seconds and reset loading when our posts have finished
+ setTimeout(function(){
+  if(value > 100 || value > 10000){
+   document.querySelector("#err").innerHTML = `<h2 class="text-center text-danger">API Not found</h2>`
+   resetPosts()
+   document.querySelector(".form-custom-control").style.width = "auto"
   }else{
     fetchPosts()
     document.querySelector("#err").innerHTML = ""
     document.querySelector(".form-custom-control").style.width = "5%"
   }
   resetLoading()
-  },1000)
-  // Loading
-  isLoading()
-})
+ },1000)
+ isLoading()
+}
