@@ -8,6 +8,7 @@ li::first-letter{
 
 .form-custom-control{
   width:5%;
+  text-align:center !important;
 }
 
 .form-custom-control:focus{
@@ -30,6 +31,7 @@ li::first-letter{
 
 @media (max-width: 576px){
  .form-custom-control{
-   width:15% !important;
+   width:21% !important;
+   text-align:center !important;
   }
 }
