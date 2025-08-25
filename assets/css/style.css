@@ -28,8 +28,9 @@ li::first-letter{
   box-shadow:none !important;
 }
 
-@media (max-width:576px){
+@media (max-width: 576px){
  .form-custom-control{
-   width:15%;
+   width:19% !important;
+   min-block-size:auto !important;
   }
 }

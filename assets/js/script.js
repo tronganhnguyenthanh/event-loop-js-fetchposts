@@ -44,7 +44,7 @@ document.querySelector(".btn-seeMore").addEventListener("click", function(){
     document.querySelector(".form-custom-control").style.width = "5%"
   }
   resetLoading()
- },1000)
- // Loading
- isLoading()
+  },1000)
+  // Loading
+  isLoading()
 })
